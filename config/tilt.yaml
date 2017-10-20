@@ -1,0 +1,38 @@
+joint00_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: joint00
+    joint_speed: 2.0
+    motor:
+        id: 10
+        init: 22 
+        min: 0
+        max: 1023
+
+joint01_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: joint01
+    joint_speed: 2.0
+    motor:
+        id: 11
+        init: 22
+        min: 0
+        max: 1023
+
+joint02_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: joint02
+    joint_speed: 2.0
+    motor:
+        id: 12
+        init: 512
+        min: 0
+        max: 1023

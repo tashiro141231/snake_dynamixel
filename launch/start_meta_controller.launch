@@ -1,0 +1,24 @@
+<launch>
+<!-- Start tilt joint controller -->
+    <rosparam file="$(find dynamixel_tutorials)/config/tilt.yaml" command="load"/>
+    <node name="controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dynamixel_controller_manager
+                --port=dxl_manager
+                joint00_controller
+                joint01_controller
+                joint02_controller
+                "
+          output="screen"/>
+          
+  <!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find dynamixel_tutorials)/config/dynamixel_joint_controller.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dynamixel_controller_manager
+                --type=meta
+                snake_joint_controller
+                joint00_controller
+                joint01_controller
+                joint02_controller
+                "
+	  output="screen"/>
+</launch>
