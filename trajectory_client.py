@@ -53,7 +53,8 @@ def ShowFlags(data):
 	i = 100
 
 def ShowTargetPosition(data):
-	print "Joint Number: %s Target Pos: %s" %(str(data.joint_index), str(data.value))
+	i = 0
+	# print "Joint Number: %s Target Pos: %s" %(str(data.joint_index), str(data.value))
 
 def main():
 	r = rospy.Rate(10)
